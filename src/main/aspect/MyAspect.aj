@@ -15,9 +15,9 @@
  */
 
 public aspect MyAspect {
-    pointcut services(Server s): target(s) && call(public * *(..));
+    pointcut services(): call(public * *(..));
 
-    before(Server s): services(s) {
+    before(): services() {
         System.out.println("Before call to " + thisJoinPointStaticPart.getSignature());
     }
 }
