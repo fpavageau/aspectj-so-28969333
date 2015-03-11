@@ -18,4 +18,9 @@ public class Server {
     public void m() {
         System.out.println("m()");
     }
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
 }
